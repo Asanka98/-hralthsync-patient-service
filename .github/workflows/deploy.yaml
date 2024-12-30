@@ -38,12 +38,12 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
 
-    - name: Set up kubectl
-      run: |
-        aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name healthsync-eks
+    # - name: Set up kubectl
+    #   run: |
+    #     aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name healthsync-eks
 
-    - name: Deploy to EKS
-      run: |
-        kubectl create namespace healthsync
-        kubectl apply -f k8s/patient-service/deployment.yaml
-        kubectl apply -f k8s/patient-service/service.yaml
+    # - name: Deploy to EKS
+    #   run: |
+    #     kubectl create namespace healthsync
+    #     kubectl apply -f k8s/patient-service/deployment.yaml
+    #     kubectl apply -f k8s/patient-service/service.yaml
