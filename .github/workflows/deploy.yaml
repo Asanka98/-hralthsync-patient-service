@@ -44,8 +44,8 @@ jobs:
 
     - name: Deploy to EKS
       run: |
-        kubectl create namespace healthsync-test
-        kubectl config set-context --current --namespace=healthsync-test
+        kubectl create namespace healthsync
+        kubectl config set-context --current --namespace=healthsync
         kubectl apply -f deployment.yaml
         kubectl apply -f service.yaml
-        kubectl get svc -n healthsync-test
+        kubectl get svc -n healthsync
