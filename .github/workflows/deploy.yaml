@@ -45,5 +45,5 @@ jobs:
     - name: Deploy to EKS
       run: |
         kubectl create namespace healthsync
-        kubectl apply -f k8s/patient-service/deployment.yaml
-        kubectl apply -f k8s/patient-service/service.yaml
+        kubectl apply -f patient-service/deployment.yaml
+        kubectl apply -f patient-service/service.yaml
