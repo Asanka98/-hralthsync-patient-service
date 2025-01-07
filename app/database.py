@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # Database connection URL
+#helthsync.czu6w8q8setz.ap-southeast-1.rds.amazonaws.com
 DATABASE_URL = "mysql+pymysql://admin:admin123@helthsync.czu6w8q8setz.ap-southeast-1.rds.amazonaws.com:3306/healthsync"
 
 # SQLAlchemy engine and session setup

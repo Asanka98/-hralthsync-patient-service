@@ -42,5 +42,5 @@ spec:
   selector:
     app: patient-service 
   ports:
-  - port: 8080
-    targetPort: 8084
+  - port: 80
+    targetPort: 8080
