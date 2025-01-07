@@ -1,4 +1,4 @@
-name: Deploy to EKS - patient-service for healthsyncnamespace
+name: Deploy to EKS - patient-service for healthsync
 
 on:
   push:
