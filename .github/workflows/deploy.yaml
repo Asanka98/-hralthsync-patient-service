@@ -40,10 +40,11 @@ jobs:
 
     - name: Set up kubectl
       run: |
-        aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name healthsync-eks
+        aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name healthsync-prod
 
     - name: Deploy to EKS
       run: |
         kubectl create namespace healthsync
+        kubectl config set-context --current --namespace=healthsync
         kubectl apply -f k8s/patient-service/deployment.yaml
         kubectl apply -f k8s/patient-service/service.yaml
